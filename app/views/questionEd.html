@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">Hold on!
+      </h1>
+
+      <form class="form" action="check-your-answers" method="post">
+
+        <div class="form-group">
+
+  <fieldset>
+
+    <legend>
+      <h3 class="heading-medium">What colour balls do you use?</h3>
+      <span class="body-text">Select all that apply</span>
+    </legend>
+
+    <div class="multiple-choice">
+      <input id="waste-type-1" name="ball-colour" type="checkbox" value="Black" {{ checked("ball-colour", "Black") }}>
+      <label for="waste-type-1">Black</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-2" name="ball-colour" type="checkbox" value="White" {{ checked("ball-colour", "White") }}>
+      <label for="waste-type-2">White</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="ball-colour" type="checkbox" value="Hot-Pink" {{ checked("ball-colour", "Hot-Pink") }}>
+      <label for="waste-type-3">Hot Pink</label>
+    </div>
+
+  </fieldset>
+</div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
